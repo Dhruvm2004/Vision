@@ -4,6 +4,7 @@ import 'package:vision/Home/home_page.dart';
 import 'package:vision/Markets/market_page.dart';
 import 'package:vision/Portfolio/portfolio.dart';
 import 'package:vision/Profile/profile.dart';
+import 'package:vision/colorpallete/constants.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -47,11 +48,29 @@ class _BottomNavState extends State<BottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(appBarTitles[_selectedIndex]), // Dynamic AppBar title
-        centerTitle: true,
+        title: Text(appBarTitles[_selectedIndex],
+        style: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold
+        ),), 
+        backgroundColor: primaryColor,// Dynamic AppBar title
+        actions: [
+          IconButton(onPressed: (){}
+          , icon: Icon(Icons.notifications,
+          size: 34,),
+          ),
+          IconButton(onPressed: (){}
+          , icon: Icon(
+            Icons.account_circle,
+            size: 34,
+          ))
+        ],
       ),
       body: pages[_selectedIndex], // Display selected page
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: primaryColor,
+        type: BottomNavigationBarType.fixed,
+        
         currentIndex: _selectedIndex,
         onTap: _itemTapped,
         selectedItemColor: Colors.blue, // Active item color
