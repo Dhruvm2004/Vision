@@ -47,17 +47,22 @@ class _BottomNavState extends State<BottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(appBarTitles[_selectedIndex]), // Dynamic AppBar title
+        backgroundColor: Colors.white,
+        // title: Text(appBarTitles[_selectedIndex]), // Dynamic AppBar title
+                title: Text('V I S I O N', style: TextStyle(
+                  fontWeight: FontWeight.bold
+                ),), // Dynamic AppBar title
         centerTitle: true,
       ),
       body: pages[_selectedIndex], // Display selected page
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         currentIndex: _selectedIndex,
         onTap: _itemTapped,
-        selectedItemColor: Colors.blue, // Active item color
+        selectedItemColor: const Color.fromARGB(255, 16, 123, 210), // Active item color
         unselectedItemColor: Colors.grey, // Inactive item color
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home",backgroundColor: Colors.white),
           BottomNavigationBarItem(icon: Icon(Icons.show_chart), label: "Markets"),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
           BottomNavigationBarItem(icon: Icon(Icons.pie_chart), label: "Portfolio"),

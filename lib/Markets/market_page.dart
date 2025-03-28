@@ -10,6 +10,10 @@ class MarketPage extends StatefulWidget {
 class _MarketPageState extends State<MarketPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text('Market Page'),
+      ),
+    );
   }
 }
