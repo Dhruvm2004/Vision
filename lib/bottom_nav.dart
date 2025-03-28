@@ -4,6 +4,7 @@ import 'package:vision/Home/home_page.dart';
 import 'package:vision/Markets/market_page.dart';
 import 'package:vision/Portfolio/portfolio.dart';
 import 'package:vision/Profile/profile.dart';
+import 'package:vision/colorpallete/constants.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
